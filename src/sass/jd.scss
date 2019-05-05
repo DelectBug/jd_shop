@@ -44,3 +44,27 @@ $fs:font-size;
     text-align: center;
     line-height: 20px;
 }
+
+#jd_stairs {
+    #{$pos}: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9990;
+    #{$w}: 0;
+    height: 100%;
+    .jd_stairs_line {
+        #{$pos}: absolute;
+        right: 0;
+        top: 0;
+        #{$w}: 0;
+        #{$h}: 100%;
+        border-right: 6px solid #7a6e6e;
+        .jd_stairs_nav {
+            #{$pos}: $abs;
+            top: 50%;
+            left: -29px;
+            #{$w}: 35px;
+            margin-top: -80px;
+        }
+    }
+}
