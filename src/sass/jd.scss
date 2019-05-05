@@ -1,0 +1,46 @@
+@charset "utf-8";
+@import "_jd_nav_header";
+@import "_jd_header";
+@import "_jd_main";
+@import "_jd_footer";
+@import"_jd_main_floor";
+$w:width;
+$h:height;
+$mar:margin;
+$pad:padding;
+$abs:absolute;
+$pos:position;
+$rel:relative;
+$col:color;
+$fs:font-size;
+.bg-color {
+    background-color: #f0f3ef;
+}
+
+#J_event {
+    z-index: 30;
+    background-color: #1c1534;
+}
+
+#J_event_lk {
+    display: block;
+    #{$w}: 100%;
+    #{$h}: 80px;
+    background: url(../img/a940a7374bec6a04.jpg) no-repeat 50% 0;
+}
+
+#J_event_close {
+    cursor: pointer;
+    #{$pos}: $abs;
+    right: 5px;
+    top: 5px;
+    font-weight: bold;
+    #{$fs}: 14px;
+    #{$col}: #FFF;
+    background: rgb(45, 45, 45);
+    opacity: .3;
+    filter: alpha(opacity=30);
+    #{$w}: 20px;
+    text-align: center;
+    line-height: 20px;
+}

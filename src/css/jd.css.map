@@ -1,0 +1,7 @@
+{
+    "version": 3,
+    "mappings": "AAIA,SAAU;EACN,gBAAgB,EAAE,OAAO;;;AAG7B,QAAS;EACL,QAAQ,EAAE,QAAQ;EAClB,OAAO,EAAE,EAAE;EACX,gBAAgB,EAAE,OAAO",
+    "sources": ["../sass/jd.scss"],
+    "names": [],
+    "file": "jd.css"
+}
