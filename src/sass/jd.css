@@ -2704,3 +2704,128 @@
   width: 35px;
   margin-top: -80px;
 }
+
+.jd_stairs_nav_last {
+  position: absolute;
+  bottom: -1px;
+  width: 100%;
+  left: -29px;
+}
+
+.jd_stairs_nav_one, .jd_stairs_nav_last_nav, .jd_stairs_nav_two, .jd_stairs_nav_three, .jd_stairs_nav_four, .jd_stairs_nav_five, .jd_stairs_nav_six, .jd_stairs_nav_seven {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  margin-bottom: 1px;
+  cursor: pointer;
+  background-color: #7a6e6e;
+  border-radius: 3px 0 0 3px;
+  z-index: 3;
+}
+
+.nav_one_dot {
+  display: inline-block;
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 6px;
+  height: 6px;
+  background-position: -150px -150px;
+  background: url(../img/toolbars.png) -150px -150px no-repeat;
+  z-index: 9;
+}
+
+.nav_one_img, .nav_two_img, .nav_three_img, .nav_four_img, .nav_five_img, .nav_six_img, .nav_seven_img, .nav_last_img {
+  display: inline-block;
+  width: 34px;
+  height: 35px;
+  margin-left: 1px;
+  position: relative;
+  z-index: 2;
+  background: url(../img/toolbars.png) -88px -175px no-repeat;
+  background-color: #7a6e6e;
+}
+
+.nav_two_img {
+  background-position: -50px 0;
+}
+
+.nav_three_img {
+  background-position: -50px -50px;
+}
+
+.nav_four_img {
+  background-position: -50px -100px;
+}
+
+.nav_five_img {
+  background-position: -190px -150px;
+}
+
+.nav_six_img {
+  background-position: -50px -150px;
+}
+
+.nav_seven_img {
+  background-position: -50px -300px;
+}
+
+.nav_last_img {
+  background-position: -50px -250px;
+}
+
+.sub_nav_text {
+  width: 62px;
+  height: 35px;
+  line-height: 35px;
+  color: #fff;
+  text-align: center;
+  font-family: 微软雅黑;
+  position: absolute;
+  z-index: 1;
+  left: 35px;
+  top: 0;
+  background-color: #7a6e6e;
+  border-radius: 3px 0 0 3px;
+  -webkit-transition: left .3s ease-in-out .1s;
+  transition: left .3s ease-in-out .1s;
+}
+
+.jd_stairs_nav_one:hover .sub_nav_text, .jd_stairs_nav_last_nav:hover .sub_nav_text, .jd_stairs_nav_two:hover .sub_nav_text, .jd_stairs_nav_three:hover .sub_nav_text, .jd_stairs_nav_four:hover .sub_nav_text, .jd_stairs_nav_five:hover .sub_nav_text, .jd_stairs_nav_six:hover .sub_nav_text, .jd_stairs_nav_seven:hover .sub_nav_text {
+  left: -60px;
+  background-color: #c81623;
+}
+
+.jd_stairs_nav_one:hover .nav_one_dot, .jd_stairs_nav_last_nav:hover .nav_one_dot, .jd_stairs_nav_two:hover .nav_one_dot, .jd_stairs_nav_three:hover .nav_one_dot, .jd_stairs_nav_four:hover .nav_one_dot, .jd_stairs_nav_five:hover .nav_one_dot, .jd_stairs_nav_six:hover .nav_one_dot, .jd_stairs_nav_seven:hover .nav_one_dot {
+  display: none;
+}
+
+.jd_stairs_nav_one:hover .nav_one_img, .jd_stairs_nav_last_nav:hover .nav_one_img, .jd_stairs_nav_two:hover .nav_one_img, .jd_stairs_nav_three:hover .nav_one_img, .jd_stairs_nav_four:hover .nav_one_img, .jd_stairs_nav_five:hover .nav_one_img, .jd_stairs_nav_six:hover .nav_one_img, .jd_stairs_nav_seven:hover .nav_one_img, .jd_stairs_nav_one:hover .nav_two_img, .jd_stairs_nav_last_nav:hover .nav_two_img, .jd_stairs_nav_two:hover .nav_two_img, .jd_stairs_nav_three:hover .nav_two_img, .jd_stairs_nav_four:hover .nav_two_img, .jd_stairs_nav_five:hover .nav_two_img, .jd_stairs_nav_six:hover .nav_two_img, .jd_stairs_nav_seven:hover .nav_two_img, .jd_stairs_nav_one:hover .nav_three_img, .jd_stairs_nav_last_nav:hover .nav_three_img, .jd_stairs_nav_two:hover .nav_three_img, .jd_stairs_nav_three:hover .nav_three_img, .jd_stairs_nav_four:hover .nav_three_img, .jd_stairs_nav_five:hover .nav_three_img, .jd_stairs_nav_six:hover .nav_three_img, .jd_stairs_nav_seven:hover .nav_three_img, .jd_stairs_nav_one:hover .nav_four_img, .jd_stairs_nav_last_nav:hover .nav_four_img, .jd_stairs_nav_two:hover .nav_four_img, .jd_stairs_nav_three:hover .nav_four_img, .jd_stairs_nav_four:hover .nav_four_img, .jd_stairs_nav_five:hover .nav_four_img, .jd_stairs_nav_six:hover .nav_four_img, .jd_stairs_nav_seven:hover .nav_four_img, .jd_stairs_nav_one:hover .nav_five_img, .jd_stairs_nav_last_nav:hover .nav_five_img, .jd_stairs_nav_two:hover .nav_five_img, .jd_stairs_nav_three:hover .nav_five_img, .jd_stairs_nav_four:hover .nav_five_img, .jd_stairs_nav_five:hover .nav_five_img, .jd_stairs_nav_six:hover .nav_five_img, .jd_stairs_nav_seven:hover .nav_five_img, .jd_stairs_nav_one:hover .nav_six_img, .jd_stairs_nav_last_nav:hover .nav_six_img, .jd_stairs_nav_two:hover .nav_six_img, .jd_stairs_nav_three:hover .nav_six_img, .jd_stairs_nav_four:hover .nav_six_img, .jd_stairs_nav_five:hover .nav_six_img, .jd_stairs_nav_six:hover .nav_six_img, .jd_stairs_nav_seven:hover .nav_six_img, .jd_stairs_nav_one:hover .nav_seven_img, .jd_stairs_nav_last_nav:hover .nav_seven_img, .jd_stairs_nav_two:hover .nav_seven_img, .jd_stairs_nav_three:hover .nav_seven_img, .jd_stairs_nav_four:hover .nav_seven_img, .jd_stairs_nav_five:hover .nav_seven_img, .jd_stairs_nav_six:hover .nav_seven_img, .jd_stairs_nav_seven:hover .nav_seven_img, .jd_stairs_nav_one:hover .nav_last_img, .jd_stairs_nav_last_nav:hover .nav_last_img, .jd_stairs_nav_two:hover .nav_last_img, .jd_stairs_nav_three:hover .nav_last_img, .jd_stairs_nav_four:hover .nav_last_img, .jd_stairs_nav_five:hover .nav_last_img, .jd_stairs_nav_six:hover .nav_last_img, .jd_stairs_nav_seven:hover .nav_last_img {
+  background-color: #c81623;
+}
+
+.nav_two_inner {
+  position: absolute;
+  z-index: 3;
+  right: 2px;
+  top: -5px;
+  height: 11px;
+  padding: 1px 2px;
+  border: 1px solid #b61d1d;
+  overflow: hidden;
+  color: #fff;
+  font: 11px/11px verdana;
+  text-align: center;
+  min-width: 11px;
+  border-radius: 10px;
+  background-image: linear-gradient(180deg, #cc6060 0, #b61d1d);
+}
+
+.jd_stairs_nav_two:hover .nav_two_inner {
+  background: #fff;
+  color: #c81623;
+}
+
+.jd_stairs_nav_last_nav:hover .sub_nav_text {
+  left: -48px;
+}
