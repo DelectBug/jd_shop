@@ -246,7 +246,7 @@ $fs:font-size;
     line-height: 99em;
     top: 14px;
     right: 38px;
-    background: red;
+    // background: red;
     b {
         display: block;
         #{$pos}: $abs;
@@ -818,4 +818,34 @@ $fs:font-size;
 
 .ft_last_ft_img_5 {
     background: url(../img/sprite_footer.png) 0px -155px no-repeat;
+}
+
+.price_sum {
+    float: right;
+    #{$h}: 43px;
+    line-height: 20px;
+    #{$mar}: 7px 20px 0 10px;
+    #{$col}: #666;
+    #{$w}: auto;
+    #{$pos}: $rel;
+}
+
+.txt {
+    float: left;
+    #{$w}: 50px;
+    text-align: right;
+    color: #999;
+    white-space: nowrap;
+}
+
+.price_sum .price {
+    display: inline-block;
+    text-align: right;
+    font-family: verdana;
+    em {
+        #{$fs}: 16px;
+        #{$col}: #E2231A;
+        font-weight: 700;
+        font-style: normal;
+    }
 }

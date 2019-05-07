@@ -226,7 +226,6 @@
   line-height: 99em;
   top: 14px;
   right: 38px;
-  background: red;
 }
 
 .link b {
@@ -799,4 +798,35 @@
 
 .ft_last_ft_img_5 {
   background: url(../img/sprite_footer.png) 0px -155px no-repeat;
+}
+
+.price_sum {
+  float: right;
+  height: 43px;
+  line-height: 20px;
+  margin: 7px 20px 0 10px;
+  color: #666;
+  width: auto;
+  position: relative;
+}
+
+.txt {
+  float: left;
+  width: 50px;
+  text-align: right;
+  color: #999;
+  white-space: nowrap;
+}
+
+.price_sum .price {
+  display: inline-block;
+  text-align: right;
+  font-family: verdana;
+}
+
+.price_sum .price em {
+  font-size: 16px;
+  color: #E2231A;
+  font-weight: 700;
+  font-style: normal;
 }
