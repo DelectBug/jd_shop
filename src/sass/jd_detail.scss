@@ -331,6 +331,7 @@ i {
     #{$w}: 540px;
     #{$h}: 540px;
     z-index: 18;
+    // float: left;
     #{$pos}: $abs;
     top: 0;
     background: url(//static.360buyimg.com/item/main/1.0.12/css/i/loading.gif) center center no-repeat #fff;
@@ -341,6 +342,7 @@ i {
 }
 
 .bigimg {
+    #{$h}: 800px;
     #{$w}: 800px;
     border: 0;
     vertical-align: middle;
