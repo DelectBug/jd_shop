@@ -13,6 +13,7 @@ $(document).ready(function() {
         }).done(function(data) {
             //详情页数据渲染
             const arr = data.urllist.split(',');
+            $('.jqzoom img').attr('sid', data.sid);
             var str = '';
             $.each(arr, function(index, value) {
                 $('.jqzoom img').attr("src", arr[0])
@@ -105,5 +106,98 @@ $(document).ready(function() {
             })();
         });
     })();
+    //存储cookie值
+    (function() {
+        class cookie {
+            constructor() {
+                this.arrsid = [];
+                this.arrnum = [];
+                this.cart_bth = $('.choose_btns a');
+                this.sid = $('.jqzoom img').attr('sid');
+                this.btn_reduce = $('.btn_reduce');
+                this.btn_add = $('.btn_add');
+                // console.log(this.btn_add);
+                this.value = $('.buy_num').val();
+            }
 
-});;
+
+            cookie_init() {
+                var _this = this;
+                // console.log(this)
+                this.btn_reduce.on('click', function(event) {
+                        _this.btn_reduce_click();
+                        // event.stopPropagation();
+                    })
+                    // console.log(this.btn_add)
+                this.btn_add.on('click', function(event) {
+                    console.log(_this.btn_add)
+                    _this.btn_add_click();
+                    // event.stopPropagation();
+                })
+                this.cart_bth.on('click', function(event) {
+                    console.log(_this)
+                    _this.btnclick();
+                    // event.stopPropagation();
+                })
+            }
+
+
+            btn_reduce_click() {
+                this.value--;
+                if (this.value <= 1) {
+                    this.value = 1;
+                    this.btn_reduce.css("cursor", "not-allowed");
+                    this.btn_reduce.attr('disabled', "true")
+                }
+                if (this.value > 1) {
+                    this.btn_reduce.css("cursor", "pointer")
+                }
+                $('.buy_num').val(this.value)
+                $('.shopping_cart .ci-count').html(this.value);
+            }
+
+
+            btn_add_click() {
+                console.log(this);
+                this.value++;
+                this.btn_reduce.css("cursor", "pointer");
+                $('.buy_num').val(this.value)
+                $('.shopping_cart .ci-count').html(this.value);
+            }
+
+
+            cookietoarray() {
+                if ($.cookie('cookiesid') && $.cookie('cookienum')) { //判断商品是第一次存还是多次存储
+                    this.arrsid = $.cookie('cookiesid').split(','); //cookie商品的sid                     
+                    this.arrnum = $.cookie('cookienum').split(','); //cookie商品的num
+                }
+            }
+
+
+            btnclick() {
+                console.log(3)
+                    //要ajax先执行好在取得sid数据,否则是数据取得失败,点击事件也是异步的所以放在这里也可以实现。
+                this.sid = $('.jqzoom img').attr('sid');
+                this.cookietoarray();
+                if ($.inArray(this.sid, this.arrsid) != -1) { //商品存在，数量叠加 
+                    //先取出cookie中的对应的数量值+当前添加的数量值，添加到对应的cookie中。
+                    var $num = parseInt(this.arrnum[$.inArray(this.sid, this.arrsid)]) + parseInt($('.buy_num').val());
+                    this.arrnum[$.inArray(this.sid, this.arrsid)] = $num;
+                    console.log(this.arrnum)
+                    $.cookie('cookienum', this.arrnum.toString(), { expires: 7 }); //数组存入cookie
+                    alert('商品数量更新');
+                    $('.shopping_cart .ci-count').html($num);
+                } else { //不存在，第一次添加。将商品的id和数量存入数组，再存入cookie.
+                    this.arrsid.push(this.sid); //将当前的id存入数组
+                    $.cookie('cookiesid', this.arrsid.toString(), { expires: 7 }); //数组存入cookie
+
+                    this.arrnum.push($('.buy_num').val());
+                    $.cookie('cookienum', this.arrnum.toString(), { expires: 7 }); //数组存入cookie
+                    alert('商品数量添加');
+                }
+                // this.cookietoarray();
+            }
+        }
+        new cookie().cookie_init();
+    })();
+});

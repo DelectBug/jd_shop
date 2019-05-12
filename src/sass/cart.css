@@ -335,7 +335,7 @@
   margin-right: 5px;
 }
 
-.jdcheckbox {
+.jdcheckbox, .shop_jdcheckbox {
   float: none;
   position: relative;
   z-index: 5;
@@ -394,7 +394,7 @@
 
 .main_list_shop {
   position: relative;
-  padding: 0 0 1px 40px;
+  padding: 0 0 0px 50px;
   line-height: 20px;
   background: #fff;
 }
@@ -514,7 +514,7 @@
 .shop_info_sum {
   width: 100px;
   text-align: right;
-  padding-right: 40px;
+  padding-right: 25px;
 }
 
 .shop_info_del {
@@ -829,4 +829,29 @@
   color: #E2231A;
   font-weight: 700;
   font-style: normal;
+}
+
+.empty-cart {
+  text-align: center;
+  height: 200px;
+  color: #333;
+}
+
+.empty-cart-msg {
+  height: 98px;
+  line-height: 20px;
+  font-size: 14px;
+  padding-top: 80px;
+}
+
+.amount-sum {
+  float: right;
+  padding-top: 8px;
+}
+
+.amount-sum em {
+  font-style: normal;
+  font-weight: 700;
+  color: #E2231A;
+  font-size: 13px;
 }

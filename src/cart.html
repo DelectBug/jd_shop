@@ -195,7 +195,7 @@
     </div>
     <div class="mid jd_shop clear">
         <div class="jd_logo_shop">
-            <a href="#" class="logo"></a>
+            <a href="http://10.31.163.39/projectname/jd_shop/src/jd_index.html" class="logo"></a>
             <a href="#" class="link">
                 <b></b>
             </a>
@@ -235,49 +235,24 @@
                         <div class="cart_sm">小计</div>
                         <div class="cart_operate">操作</div>
                     </div>
-                    <div class="cart_main_inner">
-                        <div class="cart_main_list">
+                    <div id="cart_data_render" class="cart_main_inner">
+                        <div class="empty-cart">
+                            <div class="empty-cart-msg">
+                                购物车空空的哦~，去看看心仪的商品吧~
+                                <a href="http://10.31.163.39/projectname/jd_shop/src/jd_index.html" style="color:red">去购物&gt;</a>
+                            </div>
+                        </div>
+                        <div class="cart_main_list" style="display:none">
                             <div class="main_list">
-                                <div class="main_list_shop">
-                                    <div class="list_shop_info clear" style="margin-top:30px">
-                                        <div class="shop_info_l">
-                                            <div class="info_l clear">
-                                                <div class="info_l_img">
-                                                    <a href="#">
-                                                        <img src="https://img10.360buyimg.com/cms/s80x80_jfs/t1/42325/37/423/333263/5cc26666E23a671a9/ad5af9c265b5cce9.jpg">
-                                                    </a>
-                                                </div>
-                                                <div class="img_desc">
-                                                    <div class="img_name">
-                                                        <a href="#">
-                                                                HKC 27英寸 IPS面板 2K专业设计绘图QHD 竖屏 hdmi 旋转升降 滤蓝光不闪屏 电脑液晶显示器 T7000钻石版
-                                                            </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="shop_info_mid">
-                                            <div class="shop_info_mid_txt">27英寸/IPS/2K/升降旋转</div>
-                                        </div>
-                                        <div class="shop_info_price">
-                                            <p>¥1449.00</p>
-                                        </div>
-                                        <div class="shop_info_quantity">
-                                            <div class="quantity_form">
-                                                <a href="javascript:void(0);" class="quantity_form_l">-</a>
-                                                <input type="text" autocomplete="off" class="quantity_form_mid" value="1">
-                                                <a href="javascript:void(0);" class="quantity_form_r">+</a>
-                                            </div>
-
-                                        </div>
-                                        <div class="shop_info_sum">
-                                            <strong style="color: #333">¥2898.00</strong>
-                                        </div>
-                                        <div class="shop_info_del">
-                                            <a href="javascript:void(0);">删除</a>
-                                        </div>
+                                <div class="cart_account_checkbox" style="padding-top:50px">
+                                    <div class="cart_checkbox_icon">
+                                        <input type="checkbox" class="shop_jdcheckbox">全选
                                     </div>
+                                </div>
+                                <div class="main_list_shop">
+
                                     <div class="list_shop_info clear" style="margin-top:30px">
+
                                         <div class="shop_info_l">
                                             <div class="info_l clear">
                                                 <div class="info_l_img">
@@ -298,7 +273,7 @@
                                             <div class="shop_info_mid_txt">27英寸/IPS/2K/升降旋转</div>
                                         </div>
                                         <div class="shop_info_price">
-                                            <p>¥1449.00</p>
+                                            <p>¥<span>1449.00</span></p>
                                         </div>
                                         <div class="shop_info_quantity">
                                             <div class="quantity_form">
@@ -309,7 +284,7 @@
 
                                         </div>
                                         <div class="shop_info_sum">
-                                            <strong style="color: #333">¥2898.00</strong>
+                                            <strong style="color: #333">¥<span>2898.00</span></strong>
                                         </div>
                                         <div class="shop_info_del">
                                             <a href="javascript:void(0);">删除</a>
@@ -339,9 +314,14 @@
                                     <div>
                                         <span class="txt txt-new">总价：</span>
                                         <span class="price sumPrice">
-                                            <em>￥0.00</em>
+                                            <em>￥<span>0.00</span></em>
                                         </span>
                                     </div>
+                                </div>
+                                <div class="amount-sum">
+                                    已选择
+                                    <em>0</em> 件商品
+                                    <b></b>
                                 </div>
                             </div>
                         </div>
@@ -561,6 +541,15 @@
             </div>
         </div>
     </div>
+    <div class="empty-cart">
+        <div class="empty-cart-msg">
+            购物车空空的哦~，去看看心仪的商品吧~
+            <a href="http://10.31.163.39/projectname/jd_shop/src/jd_index.html" style="color:red">去购物></a>
+        </div>
+    </div>
+    <script src="script/js/jquery.js"></script>
+    <script src="script/thirdplugins/jquery.cookie.js"></script>
+    <script src="script/js/jd_cart.js"></script>
 
 </body>
 

@@ -78,7 +78,27 @@ $('#main').load("http://10.31.163.39/projectname/jd_shop/src/jd_main.html", func
 $('#main-floors').load("http://10.31.163.39/projectname/jd_shop/src/jd_main_floor.html", function() {
     $(document).ready(function() {
         //排行榜-------tab切换
-        (function() {})();
+        (function() {
+            class rank_tab {
+                constructor() {
+                    this.tab_bth = $('.box1_footer_tab_header .box1_footer_tab_item');
+                    this.tab_inner = $('.box1_footer_tab_body .tab_body_inner')
+                }
+                rank_tab_init() {
+                    var _this = this;
+                    this.tab_bth.hover(function() {
+                        _this.over(this);
+
+                    })
+                }
+                over(present_bth) {
+                    $(present_bth).addClass('tab_item_on').siblings('div').removeClass('tab_item_on');
+                    var $num = $(present_bth).index();
+                    this.tab_inner.eq($num).show().siblings('div').hide()
+                }
+            }
+            new rank_tab().rank_tab_init();
+        })();
 
         //会员专辑------轮播图
         (function() {
@@ -106,26 +126,22 @@ $('#main-floors').load("http://10.31.163.39/projectname/jd_shop/src/jd_main_floo
                     this.tab_box = $('.box3_footer_list .box3_footer_wrapper')
                 }
                 tab() {
-                    var _this = this;
+                    let _this = this;
                     this.tab_btn.hover(function() {
                         _this.over(this)
+                        let $num = $(this).index();
+                        console.log($num)
+                        let $width = _this.tab_inner.width();
+                        console.log($width)
+                        _this.tab_box.css({
+                            "transform": "translate3d(" + (-$num * $width) + "px,0px,0px)",
+                            "transition": "all .5s",
+                        })
                     })
                 }
                 over(btn) {
                     // var _this = this;
                     $(btn).addClass('tab_btn_active').siblings('i').removeClass('tab_btn_active');
-                    var $num = $(btn).index();
-                    console.log($num)
-                    var $width = this.tab_inner.width();
-                    console.log($width)
-                        // console.log(this.tab_box)
-                        // this.tab_box.animate(function() {
-                        //     this.addClass("transform", "translate3d(-350px, 0px, 0px)")
-                        // })
-
-                    this.tab_box.attr(transform, "translate3d(" + -($width * $num) + "px, 0px, 0px)");
-
-
                 }
             }
             new coupon_tab().tab();
@@ -140,6 +156,7 @@ $('#main-floors').load("http://10.31.163.39/projectname/jd_shop/src/jd_main_floo
                 // console.log(data);
 
                 $.each(data, function(index, value) {
+                    console.log(value)
                     $html += `
                     <li class="floors_7_ul_list">
                     <a href="http://10.31.163.39/projectname/jd_shop/src/details.html?sid=${value.sid}" class="floors_7_img">
@@ -147,7 +164,7 @@ $('#main-floors').load("http://10.31.163.39/projectname/jd_shop/src/jd_main_floo
                             <img class="lazy" data-original="${value.url}" style="width:150px;height:150px;">
                         </div>
                         <div class="floors_7_info">
-                            <p class="floors_7_desc"><i class="floors_7_desc_zy">自营</i>木顿 艾灸仪器家用美容院理疗仪宫寒熏蒸仪远红外无烟坐灸仪四肢关节悬灸智能遥控电热艾灸灯温灸仪器 玫瑰金【家用款升级版】 智能遥控版</p>
+                            <p class="floors_7_desc"><i class="floors_7_desc_zy">自营</i>${value.title}</p>
                             <div class="floors_7_price">
                                 <div class="info_price">
                                     <i>￥</i><span>${value.price}</span>

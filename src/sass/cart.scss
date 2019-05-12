@@ -411,7 +411,7 @@ $fs:font-size;
 
 .main_list_shop {
     #{$pos}: $rel;
-    #{$pad}: 0 0 1px 40px;
+    #{$pad}: 0 0 0px 50px;
     line-height: 20px;
     background: #fff;
     .list_shop_info {
@@ -526,7 +526,7 @@ $fs:font-size;
     @extend .shop_info_quantity;
     #{$w}: 100px;
     text-align: right;
-    padding-right: 40px;
+    padding-right: 25px;
 }
 
 .shop_info_del {
@@ -847,5 +847,33 @@ $fs:font-size;
         #{$col}: #E2231A;
         font-weight: 700;
         font-style: normal;
+    }
+}
+
+.empty-cart {
+    text-align: center;
+    height: 200px;
+    color: #333;
+}
+
+.empty-cart-msg {
+    height: 98px;
+    line-height: 20px;
+    font-size: 14px;
+    padding-top: 80px;
+}
+
+.shop_jdcheckbox {
+    @extend .jdcheckbox;
+}
+
+.amount-sum {
+    float: right;
+    padding-top: 8px;
+    em {
+        font-style: normal;
+        font-weight: 700;
+        color: #E2231A;
+        font-size: 13px;
     }
 }
