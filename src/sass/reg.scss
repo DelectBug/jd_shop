@@ -13,6 +13,20 @@ $fs:font-size;
     margin: 0 auto;
 }
 
+.fwidth {
+    width: 70px;
+    float: left;
+}
+
+.error {
+    color: red;
+}
+
+p {
+    margin-top: 16px !important;
+    margin-bottom: 16px !important;
+}
+
 .header {
     height: 110px;
     background: url(https://misc.360buyimg.com/user/reg/3.0.0/css/i/headbg.jpg) repeat-x left bottom;
@@ -144,7 +158,7 @@ $fs:font-size;
 
 .reg_main {
     #{$mar}: 50px auto 186px;
-    #{$w}: 400px;
+    #{$w}: 600px;
 }
 
 .form-item {

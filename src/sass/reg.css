@@ -3,6 +3,20 @@
   margin: 0 auto;
 }
 
+.fwidth {
+  width: 70px;
+  float: left;
+}
+
+.error {
+  color: red;
+}
+
+p {
+  margin-top: 16px !important;
+  margin-bottom: 16px !important;
+}
+
 .header {
   height: 110px;
   background: url(https://misc.360buyimg.com/user/reg/3.0.0/css/i/headbg.jpg) repeat-x left bottom;
@@ -135,7 +149,7 @@
 
 .reg_main {
   margin: 50px auto 186px;
-  width: 400px;
+  width: 600px;
 }
 
 .form-item {

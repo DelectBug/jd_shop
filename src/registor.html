@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>个人注册</title>
+    <title>京东个人注册</title>
     <link rel="stylesheet" href="sass/reg.css">
     <link rel="stylesheet" href="css/reset.css">
     <style>
@@ -41,30 +41,42 @@
             </div>
         </div>
         <div class="reg_main">
-            <div class="reg-form">
-                <form id="register-form" method="POST" novalidate="novalidate">
-                    <div class="step2-wrap">
-                        <div class="form-item form-item-account" style="border-color: rgb(153, 153, 153);">
-                            <label>用户名</label>
-                            <input type="text" id="form-account" name="regName" class="field" autocomplete="off" maxlength="20" placeholder="您的账户名和登录名">
-                        </div>
-                        <div class="input_tip"></div>
-                        <div class="form-item" style="border-color: rgb(153, 153, 153);">
-                            <label>设置密码</label>
-                            <input type="password" id="form-pwd" name="pwd" class="field" autocomplete="off" maxlength="20" placeholder="建议使用两种或两种以上字符组合">
-                        </div>
-                        <div class="input_tip"></div>
-                        <div class="form-item" style="border-color: rgb(153, 153, 153);">
-                            <label>确认密码</label>
-                            <input type="password" id="form-equalTopwd" name="pwdRepeat" class="field" autocomplete="off" maxlength="20" placeholder="请再次输入密码">
-                        </div>
-                        <div class="input_tip"></div>
-                        <div>
-                            <button class="btn-register" id="form-register">立即注册</button>
-                        </div>
-                        <div class="input_tip"></div>
-                    </div>
+            <div class="reg-form" style="border:1px solid #333;padding:20px;">
+                <legend>用户注册</legend>
+                <form action="http://10.31.163.39/projectname/jd_shop/php/jd_reg.php" method="post" id="register-form" novalidate="novalidate">
+                    <!-- id选择器 -->
+                    <p>
+                        <label class="fwidth" for="username">用户名：</label>
+                        <input type="text" name="username" id="username" autocomplete="off" />
+                        <label id="username-error" class="error" for="username">(必填，3-15字符长度，支持汉字、字母、数字及_)</label>
+                        <!-- 1.表单提示信息  2.存放报错信息 -->
+                    </p>
+                    <p>
+                        <label class="fwidth" for="tel">电话：</label>
+                        <input type="text" name="tel" id="tel" autocomplete="off" />
+                        <label id="tel-error" class="error" for="tel">(必填，请输入11位电话号码)</label>
+                        <!-- 1.表单提示信息  2.存放报错信息 -->
+                    </p>
+                    <p>
+                        <label class="fwidth" for="password">密码：</label>
+                        <input type="password" name="password" id="password" autocomplete="off" />
+                        <label id="password-error" class="error" for="password">(必填，不得少于6位)</label>
+                    </p>
+                    <p>
+                        <label class="fwidth" for="repass">密码重复：</label>
+                        <input type="password" name="repass" id="repass" autocomplete="off" />
+                        <label id="repass-error" class="error" for="repass">(必填，不得少于6位)</label>
+                    </p>
+                    <p>
+                        <label class="fwidth" for="email">邮箱：</label>
+                        <input type="text" name="email" id="email" autocomplete="off" />
+                        <label id="email-error" class="error" for="email">(必填)</label>
+                    </p>
+                    <p>
+                        <input type="submit" value="注册" name="submit" />
+                    </p>
                 </form>
+
             </div>
         </div>
     </div>
@@ -80,6 +92,9 @@
             </div>
         </div>
     </div>
+    <script src="script/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+    <script src="script/thirdplugins/jquery.validate.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="script/js/jd_reg.js"></script>
 </body>
 
-</html>
+</html
