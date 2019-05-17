@@ -55,7 +55,7 @@ include "conn_register.php";
 	 	mysql_query("insert jduser values(null,'$user','$tel','$pass','$email',NOW())");//NOW():当前的时间
 	// 	// $query="insert jduser(sid,username,tel,password,email,time) values(null,'$user','$tel','$pass','$email',NOW())";
 	// 	// mysql_query($query);
-	 	header('location:http://10.31.163.39/projectname/jd_shop/src/login.html');//页面的跳转
+	 	header('location:../src/login.html');//页面的跳转
 	}
 
 ?>

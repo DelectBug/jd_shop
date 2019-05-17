@@ -1,6 +1,6 @@
-$('#nav_header').load("http://10.31.163.39/projectname/jd_shop/src/jd_nav_header.html");
-$('#header').load("http://10.31.163.39/projectname/jd_shop/src/jd_header.html");
-$('#main').load("http://10.31.163.39/projectname/jd_shop/src/jd_main.html", function() {
+$('#nav_header').load("./jd_nav_header.html");
+$('#header').load("./jd_header.html");
+$('#main').load("./jd_main.html", function() {
     $(document).ready(function() {
         // banner---轮播图
         (function() {
@@ -75,7 +75,7 @@ $('#main').load("http://10.31.163.39/projectname/jd_shop/src/jd_main.html", func
     });
 
 });
-$('#main-floors').load("http://10.31.163.39/projectname/jd_shop/src/jd_main_floor.html", function() {
+$('#main-floors').load("./jd_main_floor.html", function() {
     $(document).ready(function() {
         //排行榜-------tab切换
         (function() {
@@ -149,17 +149,16 @@ $('#main-floors').load("http://10.31.163.39/projectname/jd_shop/src/jd_main_floo
         //数据渲染
         (function() {
             $.ajax({
-                url: 'http://10.31.163.39/projectname/jd_shop/php/jd_indexdata.php',
+                url: '../php/jd_indexdata.php',
                 dataType: 'json'
             }).done(function(data) {
                 var $html = '<ul class="clear floors_7_ul">';
                 // console.log(data);
-
                 $.each(data, function(index, value) {
-                    console.log(value)
+                    // console.log(value)
                     $html += `
                     <li class="floors_7_ul_list">
-                    <a href="http://10.31.163.39/projectname/jd_shop/src/details.html?sid=${value.sid}" class="floors_7_img">
+                    <a href="./details.html?sid=${value.sid}" class="floors_7_img">
                         <div class="floors_7_a_img">
                             <img class="lazy" data-original="${value.url}" style="width:150px;height:150px;">
                         </div>
@@ -197,7 +196,7 @@ $('#main-floors').load("http://10.31.163.39/projectname/jd_shop/src/jd_main_floo
         })();
     });
 });
-$('#footer').load("http://10.31.163.39/projectname/jd_shop/src/jd_footer.html");
+$('#footer').load("./jd_footer.html");
 //楼梯导航
 ;
 (function() {
@@ -217,4 +216,53 @@ $('#footer').load("http://10.31.163.39/projectname/jd_shop/src/jd_footer.html");
         }
     }
     new jd_stairs_effect().init();
-})();
+})();; //检测UserName--cookie值是否存在
+const p1 = new Promise(function(resolve, reject) {
+    resolve();
+}).then(() => {
+    $('#nav_header').load("./jd_nav_header.html");
+})
+setTimeout(function() {
+    (function() {
+        class cookie_log {
+            constructor() {
+                this.log_name = $('.nav-header-ul-r li:first a:first')
+                console.log(this.log_name)
+            }
+            init() {
+
+            }
+        }
+        new cookie_log().init();
+    })();
+
+}, 0)
+
+
+
+Promise.all([p1]).then(() => {
+    (function() {
+        class cookie_log {
+            constructor() {
+                this.log_name = $('.nav-header-ul-r li:first a:first')
+                console.log(this.log_name)
+            }
+            init() {
+
+            }
+        }
+        new cookie_log().init();
+    })();
+    // (function() {
+    //     class cookie_log {
+    //         constructor() {
+    //             this.log_name = $('.nav-header-ul-r')
+    //             console.log(this.log_name)
+    //         }
+    //         init() {
+
+    //         }
+    //     }
+    //     new cookie_log().init();
+    // })();
+})

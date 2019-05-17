@@ -1,3 +1,4 @@
+;
 $(document).ready(function() {
     //取到地址栏的sid
     const picid = location.search.substring(1).split('=')[1];
@@ -5,7 +6,7 @@ $(document).ready(function() {
     (function() {
         //将sid传输到后台
         $.ajax({
-            url: "http://10.31.163.39/projectname/jd_shop/php/detail.php",
+            url: "../php/detail.php",
             data: {
                 sid: picid
             },

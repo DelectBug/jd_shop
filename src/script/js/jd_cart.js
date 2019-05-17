@@ -50,7 +50,7 @@
         data_render(id, count) {
                 var _this = this;
                 $.ajax({
-                    url: 'http://10.31.163.39/projectname/jd_shop/php/jd_indexdata.php',
+                    url: '../php/jd_indexdata.php',
                     dataType: 'json'
                 }).done(function(data) {
                     var $html = '<div class="cart_main_list">';
