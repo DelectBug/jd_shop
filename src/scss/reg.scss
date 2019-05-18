@@ -1,0 +1,350 @@
+@charset "utf-8";
+$w:width;
+$h:height;
+$mar:margin;
+$pad:padding;
+$abs:absolute;
+$pos:position;
+$rel:relative;
+$col:color;
+$fs:font-size;
+.mid_mar {
+    width: 1210px;
+    margin: 0 auto;
+}
+
+.fwidth {
+    width: 70px;
+    float: left;
+}
+
+.error {
+    color: red;
+}
+
+p {
+    margin-top: 16px !important;
+    margin-bottom: 16px !important;
+}
+
+.header {
+    height: 110px;
+    background: url(https://misc.360buyimg.com/user/reg/3.0.0/css/i/headbg.jpg) repeat-x left bottom;
+}
+
+.clear::after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.hd_logo {
+    width: 160px;
+    height: 50px;
+    float: left;
+    margin-top: 24px
+}
+
+.hd_logo {
+    background: url(https://misc.360buyimg.com/user/reg/3.0.0/css/i/icon.png) no-repeat
+}
+
+.hd_logo_text {
+    float: left;
+    height: 34px;
+    line-height: 34px;
+    font-size: 24px;
+    color: #333;
+    margin-top: 34px;
+}
+
+.header_r {
+    font-size: 16px;
+    float: right;
+    margin-top: 55px;
+    color: #999;
+}
+
+.header_r a {
+    color: #e22;
+}
+
+.reg_procedure {
+    position: relative;
+    margin: 80px auto 0;
+    width: 400px;
+}
+
+.reg_procedure_one {
+    float: left;
+    text-align: center;
+}
+
+.reg_procedure_two {
+    @extend .reg_procedure_one;
+    margin-left: 106px;
+    .verify {
+        background-position: 0 -200px;
+        color: #fff;
+    }
+}
+
+.verify {
+    background: url(https://misc.360buyimg.com/user/reg/3.0.0/css/i/reg-icon.png);
+    background-position: 0 0;
+    border: none;
+    margin: 0 auto;
+    display: block;
+    #{$w}: 24px;
+    #{$h}: 24px;
+    line-height: 24px;
+    #{$fs}: 12px;
+    font-weight: 700;
+    #{$col}: #ccc;
+}
+
+.verify_inner,
+.account_inner {
+    color: #3b4;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.reg_procedure_line {
+    background: url(https://misc.360buyimg.com/user/reg/3.0.0/css/i/reg-icon.png);
+    background-position: 0 -130px;
+    left: 55px;
+    #{$w}: 124px;
+    #{$pos}: $abs;
+    top: 7px;
+    #{$h}: 10px;
+}
+
+.reg_procedure_line_2 {
+    #{$pos}: $abs;
+    left: 228px;
+    #{$w}: 124px;
+    #{$h}: 10px;
+    top: 7px;
+    background: url(https://misc.360buyimg.com/user/reg/3.0.0/css/i/reg-icon.png) no-repeat;
+    background-position: 0 -100px;
+}
+
+.reg_procedure_three {
+    margin-left: 112px;
+    float: left;
+    text-align: center;
+    .verify {
+        margin: 0 auto;
+        display: block;
+        #{$w}: 24px;
+        #{$h}: 24px;
+        line-height: 24px;
+        background: url(https://misc.360buyimg.com/user/reg/3.0.0/css/i/reg-icon.png) no-repeat;
+        background-position: -45px -200px;
+        #{$fs}: 12px;
+        font-weight: 700;
+        #{$col}: #ccc;
+    }
+}
+
+.reg_ok {
+    margin-top: 10px;
+    #{$fs}: 12px;
+    #{$col}: #999;
+}
+
+.reg_main {
+    #{$mar}: 50px auto 186px;
+    #{$w}: 600px;
+}
+
+.form-item {
+    #{$pos}: $rel;
+    border: solid 1px #ddd;
+    #{$w}: 398px;
+    #{$h}: 52px;
+    z-index: 13;
+    label {
+        float: left;
+        #{$w}: 87px;
+        #{$h}: 50px;
+        line-height: 50px;
+        padding-left: 20px;
+    }
+}
+
+.field {
+    border: 0 none;
+    #{$fs}: 14px;
+    #{$w}: 190px;
+    #{$h}: 19px;
+    padding-bottom: 11px;
+    padding-left: 20px;
+    padding-top: 16px;
+}
+
+.input_tip {
+    #{$col}: #c5c5c5;
+    #{$h}: 27px;
+    #{$fs}: 12px;
+    padding-top: 5px;
+}
+
+#form-pwd {
+    #{$w}: 210px;
+}
+
+.btn-register {
+    #{$w}: 100%;
+    #{$h}: 54px;
+    line-height: 54px;
+    text-align: center;
+    #{$col}: #fff;
+    background: #e2231a;
+    border: 0;
+    #{$fs}: 16px;
+    font-family: "Microsoft YaHei", "Hiragino Sans GB";
+    cursor: pointer;
+}
+
+.reg-other {
+    margin-top: 28px;
+}
+
+.reg-other .reg-other-person {
+    float: left;
+}
+
+.reg-other .reg-other-item {
+    #{$col}: #333;
+    cursor: pointer;
+}
+
+.reg-other .reg-ohter-icon {
+    display: inline-block;
+    #{$mar}: 0 8px 2px 0;
+    vertical-align: middle;
+    #{$w}: 26px;
+    #{$h}: 26px;
+    background: url(https://misc.360buyimg.com/user/reg/3.0.0/css/i/reg-icon.png) no-repeat;
+    background-position: 0 -160px;
+}
+
+.footer_inner {
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.footer_link a {
+    margin: 0 10px;
+}
+
+.copyright {
+    margin: 10px 0;
+}
+
+.login_box {
+    #{$w}: 306px;
+    #{$pad}: 20px;
+    display: block;
+    visibility: visible;
+}
+
+.login_box_hd {
+    #{$h}: 35px;
+    display: block;
+    #{$w}: 306px;
+    overflow: visible;
+}
+
+.login_box_wrap {
+    min-height: 23px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.form_item {
+    border: 1px solid #bdbdbd;
+    #{$h}: 38px;
+    #{$w}: 304px;
+    #{$pos}: $rel;
+    margin-bottom: 20px;
+}
+
+.form_label_name {
+    #{$pos}: $abs;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    #{$w}: 38px;
+    #{$h}: 38px;
+    border-right: 1px solid #bdbdbd;
+    background: url(https://misc.360buyimg.com/user/passport/1.0.0/widget/login-form-2018-0827/i/pwd-icons-new.png) no-repeat;
+}
+
+#loginname {
+    line-height: 18px;
+    #{$h}: 18px;
+    border: 0;
+    #{$pad}: 10px 0 10px 50px;
+    #{$w}: 254px;
+    float: none;
+    overflow: hidden;
+    font-size: 14px;
+    font-family: '\5b8b\4f53';
+}
+
+.form_label_pwd {
+    @extend .form_label_name;
+    background-position: -48px 0;
+}
+
+#loginpwd {
+    @extend #loginname;
+}
+
+.form_item_safe {
+    #{$pos}: $rel;
+    margin-bottom: 20px;
+    .safe {
+        #{$pos}: $rel;
+        #{$col}: #666;
+    }
+    .forget_pwd_safe {
+        #{$pos}: $abs;
+        right: 0;
+        top: 0;
+        #{$mar}: 0;
+    }
+}
+
+.form_item_btn {
+    #{$pos}: $rel;
+    margin-bottom: 10px;
+    .login-btn {
+        border: 1px solid #cb2a2d;
+        #{$w}: 0 auto;
+        #{$h}: 32px;
+        #{$w}: 99%;
+        #{$pos}: $rel;
+        .btn {
+            border: 1px solid #e85356;
+            display: block;
+            #{$w}: 302px;
+            background: #e4393c;
+            #{$h}: 31px;
+            line-height: 31px;
+            #{$col}: #fff;
+            #{$fs}: 20px;
+            font-family: 'Microsoft YaHei';
+            text-align: center;
+        }
+    }
+}
+
+.btn:hover {
+    text-decoration: none;
+}

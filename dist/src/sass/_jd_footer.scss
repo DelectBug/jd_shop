@@ -1,0 +1,224 @@
+@charset "utf-8";
+$w:width;
+$h:height;
+$mar:margin;
+$pad:padding;
+$abs:absolute;
+$pos:position;
+$rel:relative;
+$col:color;
+$fs:font-size;
+@mixin ellipse($w, $h) {
+    width: $w;
+    height: $h;
+    overflow: hidden;
+    position: relative;
+}
+
+@mixin opacityvalue($opacity:0.8) {
+    opacity: $opacity;
+    filter: alpha(opacity=$opacity*100);
+}
+
+.clear::after {
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: ".";
+    #{$h}: 0;
+}
+
+.ft_ser {
+    #{$pad}: 30px 0;
+    border-bottom: 1px solid #dedede;
+}
+
+.ft_ser_mid {
+    #{$w}: 1190px;
+    #{$mar}: 0 auto;
+}
+
+.ft_ser_ul {
+    #{$h}: 42px;
+    overflow: hidden;
+    .ft_ser_list {
+        float: left;
+        #{$w}: 297px;
+    }
+}
+
+.ft_ser_inner {
+    #{$pos}: $rel;
+    #{$mar}: 0 auto;
+    padding-left: 45px;
+    #{$w}: 180px;
+}
+
+.ft_ser_img {
+    overflow: hidden;
+    #{$pos}: $abs;
+    left: 0;
+    top: 0;
+    #{$w}: 36px;
+    #{$h}: 42px;
+    text-indent: -999px;
+    background: url(../img/sprite_footer.png) no-repeat 0 -192px;
+}
+
+.ft_ser_text {
+    overflow: hidden;
+    #{$w}: 100%;
+    #{$h}: 42px;
+    line-height: 42px;
+    #{$fs}: 18px;
+    font-weight: 700;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    #{$col}: #444;
+}
+
+.quick {
+    background-position: -41px -192px;
+}
+
+.good {
+    background-position: -82px -192px;
+}
+
+.shen {
+    background-position: -123px -192px;
+}
+
+.ft_hp {
+    #{$pad}: 20px 0;
+}
+
+.ft_hp_mid {
+    @extend .ft_ser_mid;
+}
+
+.ft_hp_list {
+    overflow: hidden;
+    #{$h}: 160px;
+    .ft_hp_nav {
+        float: left;
+        #{$w}: 198px;
+        line-height: 22px;
+    }
+    .ft_hp_nav_tit {
+        margin-bottom: 5px;
+        #{$fs}: 14px;
+    }
+    .ft_hp_nav_inner {}
+}
+
+.ft_hp_l_tit {
+    margin-bottom: 15px;
+    #{$fs}: 14px;
+    text-align: center;
+}
+
+.ft_hp_l {
+    background: url(../img/sprite_footer.png) no-repeat 0 0;
+    float: right;
+    #{$w}: 200px;
+    #{$h}: 150px;
+}
+
+.ft_hp_l_inner {
+    #{$pad}: 0 10px;
+}
+
+.ft_hp_l_text {
+    text-align: right;
+}
+
+.ft_last_mid {
+    @extend .ft_hp_mid;
+    #{$pad}: 15px 0;
+    border-top: 1px solid #e1e1e1;
+    text-align: center;
+}
+
+.ft_last_line {
+    #{$mar}: 0 10px;
+    #{$col}: #ccc;
+}
+
+.ft_last_inner {
+    #{$pad}: 10px 0;
+    line-height: 22px;
+    #{$col}: #999;
+    a {
+        #{$col}: #999;
+    }
+}
+
+.ft_last_inner a:hover {
+    #{$col}: #c81623;
+}
+
+.pic_country {
+    display: inline-block;
+    #{$w}: 15px;
+    #{$h}: 10px;
+    vertical-align: -1px;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+}
+
+.pic_country_Global {
+    background: url(../img/sprite_footer.png) no-repeat -108px -155px;
+    #{$h}: 12px;
+    margin-top: -1px;
+}
+
+.pic_country_rissia {
+    background: url(../img/sprite_footer.png) no-repeat -168px -155px;
+}
+
+.pic_country_indonesia {
+    background: url(../img/sprite_footer.png) no-repeat -148px -155px;
+}
+
+.pic_country_spain {
+    background: url(../img/sprite_footer.png) no-repeat -128px -155px;
+}
+
+.pic_country_thailand {
+    background: url(../img/sprite_footer.png) no-repeat -108px -172px;
+}
+
+.ft_last_ft {
+    #{$mar}: 25px 0;
+}
+
+.ft_last_ft_img {
+    overflow: hidden;
+    display: inline-block;
+    margin: 0 3px;
+    width: 103px;
+    height: 32px;
+    text-indent: -999px;
+}
+
+.ft_last_ft_img_1 {
+    background: url(../img/sprite_footer.png) -205px -111px no-repeat;
+}
+
+.ft_last_ft_img_2 {
+    background: url(../img/sprite_footer.png) -205px -74px no-repeat;
+}
+
+.ft_last_ft_img_3 {
+    background: url(../img/sprite_footer.png) -205px -37px no-repeat;
+}
+
+.ft_last_ft_img_4 {
+    background: url(../img/sprite_footer.png) -205px -0px no-repeat;
+}
+
+.ft_last_ft_img_5 {
+    background: url(../img/sprite_footer.png) 0px -155px no-repeat;
+}
